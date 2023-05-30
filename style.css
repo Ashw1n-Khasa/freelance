@@ -7,10 +7,10 @@
     display: flex;
     width: 40%;
     margin: auto;
-    /* align-items: center; */
     flex-direction: column;
+    justify-content: center;
     margin-top: 10rem;
-    /* border: 1px solid black; */
+    
 }
 
 .logo{
@@ -29,8 +29,8 @@
 }
 
 .email{
-    font-size: 17px;
-    margin-left: 8rem;
+    font-size: 100%;
+    margin-left: 23%;
     margin-bottom: 5px;
     font-family: rubik;
     font-weight: 50;
@@ -38,10 +38,9 @@
 }
 
 .input{
+    line-height: 32px;
     width:50%;
-    height: 2rem;
     margin:auto;
-    margin-left: 8rem;
     margin-bottom: 1rem;
     border-radius: 0px;
     border: solid black 1px;
@@ -53,10 +52,10 @@
     height: 3rem;
     border-radius: 0px;
     border:2px solid #3e9ddd;
-    margin-top: 1rem;
-    margin-left: 8rem;
+    margin:auto;
+    margin-top: 1rem;    
     margin-bottom: 1rem;
     background-color: #222636;
     color: #e8f6f0;
-    font-size: 17px;
+    font-size: 100%;
 }
