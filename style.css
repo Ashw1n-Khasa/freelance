@@ -1,0 +1,62 @@
+@font-face{
+    font-family: rubik;
+    src:url(Rubik-VariableFont_wght.ttf)
+}
+
+.main-box{
+    display: flex;
+    width: 40%;
+    margin: auto;
+    /* align-items: center; */
+    flex-direction: column;
+    margin-top: 10rem;
+    /* border: 1px solid black; */
+}
+
+.logo{
+    width: 7rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    
+}
+
+.BD{
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin: auto;
+    font-family: rubik;
+    margin-bottom: 1rem;
+}
+
+.email{
+    font-size: 17px;
+    margin-left: 8rem;
+    margin-bottom: 5px;
+    font-family: rubik;
+    font-weight: 50;
+    color:rgb(57, 56, 56)
+}
+
+.input{
+    width:50%;
+    height: 2rem;
+    margin:auto;
+    margin-left: 8rem;
+    margin-bottom: 1rem;
+    border-radius: 0px;
+    border: solid black 1px;
+    padding-left: 1rem;
+}
+
+.enter{
+    width: 54%;
+    height: 3rem;
+    border-radius: 0px;
+    border:2px solid #3e9ddd;
+    margin-top: 1rem;
+    margin-left: 8rem;
+    margin-bottom: 1rem;
+    background-color: #222636;
+    color: #e8f6f0;
+    font-size: 17px;
+}
