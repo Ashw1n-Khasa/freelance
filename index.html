@@ -4,18 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css"/>
+    <title>Azul - BD das Milhas</title>
+    
 </head>
 <body>
-    <div class="main-box">
+    <style>
+        @font-face{
+            font-family: rubik;
+            src:url(Rubik-VariableFont_wght.ttf)
+        }
+
+        .main-box{
+            display: flex;
+            width: 40%;
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 10rem;
+        }
+
+        .logo{
+            width: 7rem;
+            margin: auto;
+            margin-bottom: 1rem;
+        }
+
+        .BD{
+            font-weight: 500;
+            font-size: 1.3rem;
+            margin: auto;
+            font-family: rubik;
+            margin-bottom: 1rem;
+        }
+
+        .email{
+            font-size: 100%;
+            margin-left: 23%;
+            margin-bottom: 5px;
+            font-family: rubik;
+            font-weight: 50;
+            color:rgb(57, 56, 56)
+        }
+
+        .input{
+            line-height: 32px;
+            width:50%;
+            margin:auto;
+            margin-bottom: 1rem;
+            border-radius: 0px;
+            border: solid black 1px;
+            padding-left: 1rem;
+        }
+
+        .enter{
+            width: 54%;
+            height: 3rem;
+            border-radius: 0px;
+            border:2px solid #3e9ddd;
+            margin:auto;
+            margin-top: 1rem;    
+            margin-bottom: 1rem;
+            background-color: #222636;
+            color: #e8f6f0;
+            font-size: 100%;
+        }
+    </style>
+
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Define your login credentials here
+            var credentials = [
+                { username: "admin", password: "password" },
+                { username: "user1", password: "123456" },
+                { username: "user2", password: "abcdef" }
+            ];
+
+            // Check if the entered credentials match any stored credentials
+            var matchedCredential = credentials.find(function (credential) {
+                return credential.username === username && credential.password === password;
+            });
+
+            if (matchedCredential) {
+                // Show the iframe when the user is authenticated
+                document.getElementById("iframe").style.display = "block";
+                // Hide the login overlay
+                document.getElementById("overlay").style.display = "none";
+            } else {
+                alert("Invalid username or password");
+            }
+        }
+    </script>
+
+    <div class="main-box" id="overlay">
         <img class="logo" src="Screenshot from 2023-05-30 08-22-23.png">
         <div class="BD">BD das Milhas</div>
         <div class="email">endereço de email</div>
-        <input class="input" type="text" >
+        <input class="input" id="username" type="text" >
         <div class="email">Senha</div>
-        <input class="input" type ="password">
-        <input class="enter" type="submit" value="Entrar">
+        <input class="input" id="password" type ="password">
+        <button onclick="login()" class="enter">Entrar</button>
     </div>
+
+    <iframe id="iframe" title="power_bi_rj" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMjY5NzNlNDktNmMzYy00MzRhLWI1M2MtNmRhYWMzNjA2MzRkIiwidCI6ImYwNDY5NDAzLTk1ODUtNDdmNS1iOWM2LWMzYTIwMjMzNjZjOCJ9" frameborder="0" allowFullScreen="true" style="display: none;"></iframe>
 </body>
 </html>
